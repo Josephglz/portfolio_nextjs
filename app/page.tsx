@@ -17,7 +17,7 @@ export default function HomePage() {
       <div className="hidden md:flex md:flex-row md:space-x-4 text-white text-xl font-medium">
         <Link
           href={'/'}
-          className="hover:text-green-highlight transition duration-300 ease-in-out cursor-pointer">
+          className="text-green-highlight font-bold transition duration-300 ease-in-out cursor-pointer">
             Home
         </Link>
         <Link 
