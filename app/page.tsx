@@ -9,7 +9,7 @@ export default function HomePage() {
   const xIcon = getIcon("x-twitter");
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center md:items-start md:px-28 space-y-6 select-none">
+    <div className="w-full absolute h-full flex flex-col items-center justify-center md:items-start md:px-28 space-y-6 select-none">
       <div>
         <h1 className="font-extrabold md:text-5xl text-4xl text-white">Joseph Gonzalez</h1>
         <h2 className="text-slate-500 md:text-xl text-lg text-center md:text-left">Fullstack developer</h2>  

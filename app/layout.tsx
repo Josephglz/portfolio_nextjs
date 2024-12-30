@@ -1,3 +1,4 @@
+import { Navigation } from "./components/navigation/navigation";
 import "./globals.css";
 import type { Metadata } from "next";
 
@@ -82,10 +83,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body
-        className={`antialiased bg-background font-Lato`}
-      >
-        {children}
+      <body className="antialiased bg-background font-Lato text-white flex flex-col">
+        <Navigation />
+        <main className="w-full">
+          {children}
+        </main>
       </body>
     </html>
   );
