@@ -10,6 +10,7 @@ export const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuIcon = getIcon("bars");
     const isHome = usePathname() === "/";
+    const currentUrl = usePathname();
 
     return (
         <nav className={`${isHome ? 'md:hidden' : ''} sticky bg-transparent md:bg-slate-900 md:shadow w-full z-20 top-0`}>
@@ -27,21 +28,51 @@ export const Navigation = () => {
                     </button>
                 </div>
                 <div className={`${ isMenuOpen ? 'block transition duration-300 ease-in-out' : 'hidden' } absolute top-12 left-0 w-full px-4 md:px-0 md:block md:relative md:top-auto md:left-auto md:w-auto`}>
-                    <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    <ul className="flex flex-col md:items-center p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
                         <li>
-                            <Link href="/" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0">Inicio</Link>
+                            <Link
+                                href="/" 
+                                className={`${currentUrl === '/' ? 'text-green-500 font-bold' : 'text-white'} block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0 md:hover:text-green-highlight md:transition duration-300 ease-in-out`}
+                                onClick={() => setIsMenuOpen(false)}>    
+                                Inicio
+                            </Link>
                         </li>
                         <li>
-                            <Link href="/about" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Perfil</Link>
+                            <Link 
+                                href="/about" 
+                                className={`${currentUrl === '/about' ? 'text-green-500 font-bold' : 'text-white'} block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0 md:hover:text-green-highlight md:transition duration-300 ease-in-out`}
+                                onClick={() => setIsMenuOpen(false)}>
+                                Perfil
+                            </Link>
                         </li>
                         <li>
-                            <Link href="/education" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Educación</Link>
+                            <Link 
+                                href="/education" 
+                                className={`${currentUrl === '/education' ? 'text-green-500 font-bold' : 'text-white'} block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0 md:hover:text-green-highlight md:transition duration-300 ease-in-out`}
+                                onClick={() => setIsMenuOpen(false)}>
+                                Educación
+                            </Link>
                         </li>
                         <li>
-                            <Link href="/experience" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Experiencia</Link>
+                            <Link
+                                href="/experience" 
+                                className={`${currentUrl === '/experience' ? 'text-green-500 font-bold' : 'text-white'} block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0 md:hover:text-green-highlight md:transition duration-300 ease-in-out`}
+                                onClick={() => setIsMenuOpen(false)}>
+                                Experiencia
+                            </Link>
                         </li>
                         <li>
-                            <Link href="/projects" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0">Proyectos</Link>
+                            <Link
+                                href="/projects"
+                                className={`${currentUrl === '/projects' ? 'text-green-500 font-bold' : 'text-white'} block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0 md:hover:text-green-highlight md:transition duration-300 ease-in-out`}
+                                onClick={() => setIsMenuOpen(false)}>
+                                Proyectos
+                            </Link>
+                        </li>
+                        <li>
+                            <button className="md:block hidden py-2 px-4 rounded-md bg-green-selected hover:bg-green-500 transition duration-300 ease-in-out">
+                                Descargar CV
+                            </button>
                         </li>
                     </ul>
                 </div>

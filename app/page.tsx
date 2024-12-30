@@ -18,27 +18,27 @@ export default function HomePage() {
         <Link
           href={'/'}
           className="text-green-highlight font-bold transition duration-300 ease-in-out cursor-pointer">
-            Home
+            Inicio
         </Link>
         <Link 
           href={'/about'}
           className="hover:text-green-highlight transition duration-300 ease-in-out cursor-pointer">
-            About
+            Perfil
         </Link>
         <Link
           href={'/education'}
           className="hover:text-green-highlight transition duration-300 ease-in-out cursor-pointer">
-            Education
+            Educación
         </Link>
         <Link
           href={'/experience'}
           className="hover:text-green-highlight transition duration-300 ease-in-out cursor-pointer">
-            Experience
+            Experiencia
         </Link>
         <Link
           href={'/projects'}
           className="hover:text-green-highlight transition duration-300 ease-in-out cursor-pointer">
-            Projects
+            Proyectos
         </Link>
       </div>
       <div className="flex flex-row space-x-4">
