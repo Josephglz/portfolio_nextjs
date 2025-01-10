@@ -28,7 +28,7 @@ export const Navigation = () => {
                     </button>
                 </div>
                 <div className={`${ isMenuOpen ? 'block transition duration-300 ease-in-out' : 'hidden' } absolute top-12 left-0 w-full px-4 md:px-0 md:block md:relative md:top-auto md:left-auto md:w-auto`}>
-                    <ul className="flex flex-col md:items-center p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                    <ul className="flex flex-col md:items-center p-4 md:p-0 mt-4 font-medium rounded-lg bg-gray-800 md:bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
                         <li>
                             <Link
                                 href="/" 
