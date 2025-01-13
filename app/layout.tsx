@@ -1,3 +1,4 @@
+import { Bounce, ToastContainer } from "react-toastify";
 import { Navigation } from "./components/navigation/navigation";
 import "./globals.css";
 import type { Metadata } from "next";
@@ -85,9 +86,22 @@ export default function RootLayout({
     <html lang="es">
       <body className="antialiased bg-background font-Lato text-white flex flex-col">
         <Navigation />
-        <main className="w-full">
+        <main className="w-full md:px-32 px-4 mt-4">
           {children}
         </main>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition={Bounce}
+        />
       </body>
     </html>
   );
