@@ -13,12 +13,12 @@ export const Navigation = () => {
     const currentUrl = usePathname();
 
     return (
-        <nav className={`${isHome ? 'md:hidden' : ''} sticky bg-transparent md:bg-slate-900 md:shadow w-full z-20 top-0`}>
+        <nav className={`${isHome ? 'md:hidden' : 'bg-slate-900'} sticky bg-transparent md:bg-slate-900 md:shadow w-full z-20 top-0`}>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="/" className={`${isHome ? 'hidden' : ''} flex items-center space-x-3 rtl:space-x-reverse`}>
                     <h1 className="md:inline-block self-center whitespace-nowrap font-black text-4xl text-white">Joseph Gonzalez</h1>
                 </Link>
-                <div className="flex ">
+                <div className="flex flex-grow justify-end">
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)} 
                         type="button" 
